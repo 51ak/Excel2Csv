@@ -1,0 +1,66 @@
+"description","entered","calculated",
+"empty string","","",
+"len near 128","xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",127.0
+"len near 128","xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",128.0
+"len near 128","xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",129.0
+"non-ascii",Ð,Ð,
+"zero",0.0,0.0,
+"one",1.0,1.0,
+"minus 1",-1.0,-1.0,
+"1.23",1.23,1.23,
+"1.234",1.234,1.234,
+"123456",123456.0,123456.0,
+"1.23456789012345",1.23456789012,2.23456789012,
+"one third",0.333333333333,0.333333333333,
+"true",1,1,
+"false",0,0,
+"#div/0!",7,7,
+"#na",42,42,
+"#name?",29,29,
+"#num!",36,36,
+"#value!",15,15,
+"#ref!",23,23,
+"#null!",0,0,
+"no data (formatting)",,,"more guff"
+"rich text 1","boldplain","boldplainboldplain",
+"rich text 2","ArialCourier","ArialCourierArialCourier",
+"no data (no formatting)",,,"filler"
+"Short Date",36525.0,36526.0,
+"dd-mmm",39465.0,39466.0,
+"dd/mm/yy",39465.0,39466.0,
+"dd/mm/yyyy",39465.0,39466.0,
+"Long Date",39465.0,39466.0,
+"Hard newline (Alt-Enter)","Line1
+Line2
+Line3","Line1
+Line2
+Line3",
+"NBSP",foonly frabjous farnarklingliness,,
+"2 internal spaces","foo  bar","foo  bar",
+"1 leading space"," foo"," foo",
+"2 leading spaces","  foo","  foo",
+"1 trailing space","foo ","foo ",
+"2 trailing spaces","foo  ","foo  ",
+"Hard newline (Alt-Enter)","Line1
+Line2","Line1
+Line2",
+"Hard newline (Alt-Enter) with leading trailing & internal spaces","  Li  ne1  
+   Li   ne2   
+    Li    ne3    ",,
+"embedded control chars",,"	
+",
+"embedded CC with u/score",,"	
+P_xQ_x000F_R_x000C_S",
+"currency",1234.56,1234.56,
+"time",0.0909090909091,0.0909090909091,
+"more underscores","_x000F__x000f_","_x000F__x000f_",
+"less/greater/ampersand","1 < 2 & 4 > 3","1 < 2 & 4 > 3",
+"rich text and spaces","   x      bold      y   ",,
+"spaces in font name","this is Times New Roman",,
+"empty cells",,,"guff"
+"datetime",40000.0909091,40001.0909091,
+"pseudofloat inf","123E999","123E999",
+"pseudofloat big","12E99","12E99",
+"pseudofloat tiny","12E-99","12E-99",
+"text with custom date format","text, dammit","text, dammit",
+"text with standard date format","text, dammit","text, dammit",
