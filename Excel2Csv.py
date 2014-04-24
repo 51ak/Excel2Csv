@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*- 
-import xdrlib,sys,os,xlrd
+import xdrlib,sys,os,xlrd,string
 
 
 class os_:
@@ -58,7 +58,7 @@ class excel_:
                 if isinstance(cell_valuetmp,unicode):
                     try:
                         cell_value=os_().get_aciistr(cell_valuetmp)
-                        cell_value='"'+cell_value.replace('"',"'")+'"'
+                        #cell_value='"'+cell_value.replace('"',"'")+'"'
                     except Exception,ex:
                         print(cell_valuetmp)
                         errormess=('ex_'+str(ex))
@@ -66,15 +66,15 @@ class excel_:
                         return errormess
                 else:
                     try:                    
-                        cell_value = str(cell_valuetmp)
-                        if ',' in cell_value:
-                            cell_value='"'+cell_value.replace('"',"'")+'"'  
+                        cell_value = str(cell_valuetmp)                         
                     except Exception,ec:
                         print(cell_valuetmp)
                         errormess='ec_'+str(ec)
                         iserror=True 
-                        return errormess                   
-                row_value=row_value+cell_value+','
+                        return errormess
+                if ',' in cell_value:
+                            cell_value='"%s"' % (cell_value.replace('"',"'")) 
+                row_value="%s,%s" % (row_value,cell_value)
             if(len(row_value)>1):
                 row_value=row_value[:-1]+'\n'
                 fp.write(row_value)   
