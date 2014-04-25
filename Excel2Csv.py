@@ -16,7 +16,7 @@ class os_:
     def get_aciistr(self,cell_valuetmp):
         #try GB2312,UTF8,gbk
         try:
-            #cell_value='"'+cell_valuetmp.encode('gb2312').replace('"',"'")+'"'  
+            #cell_value='"'+cell_valuetmp.encode('gb2312').replace('"',"'")+'"'            
             cell_value=cell_valuetmp.encode('gb2312')  
         except:
             try:
@@ -53,7 +53,10 @@ class excel_:
         fp = open(csvfile,'a')
         for nrows in range(nrows_num):
             row_value=''    
-            for ncols in range(ncols_num):        
+            for ncols in range(ncols_num):                
+                if(row_value == ',,,,,'):
+                    row_value=''
+                    break
                 cell_valuetmp = table.cell(nrows,ncols).value
                 if isinstance(cell_valuetmp,unicode):
                     try:
