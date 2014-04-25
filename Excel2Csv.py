@@ -74,7 +74,7 @@ class excel_:
                         return errormess
                 if ',' in cell_value:
                             cell_value='"%s"' % (cell_value.replace('"',"'")) 
-                row_value="%s,%s" % (row_value,cell_value)
+                row_value="%s%s," % (row_value,cell_value)
             if(len(row_value)>1):
                 row_value=row_value[:-1]+'\n'
                 fp.write(row_value)   
